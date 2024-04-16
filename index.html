@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link  class="icon"rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShl93v6kL6fsXx42ixg5I88ACn1jRONchMbg&usqp=CAU"  /
+>
+    <title>Login Form</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+        body {
+    font-family: Raleway, sans-serif;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ48uz3h-c2XvvVw93LD0h9LY_7ojgjTFBNVfuIbibfvUYunmocdWJUXYWgfW93D4hAoJE&usqp=CAU");
+    background-size: cover;
+    
+}
+
+.container {
+    margin: 10px;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0,0,0,.8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    color:whitesmoke;
+    text-shadow: white 2px 4px 6px  ;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color:transparent;
+    color: whitesmoke;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: gold;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left:10px ;
+}
+
+button:hover {
+    background-color:gold;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login  <i class="fa-solid fa-book-open-reader fa-flip"></i></h2>
+        <form id="loginForm" onsubmit="return false;">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="class" placeholder="Class"required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="subject" placeholder="Subject"required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email"required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password"required>
+            </div>
+            <button onclick="login()">Login</button>
+            <button id="googleLogin">Login with Google</button>
+        </form>
+    </div>
+    <script >
+        function login() {
+    var name = document.getElementById('name').value;
+    var classValue = document.getElementById('class').value;
+    var subject = document.getElementById('subject').value;
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    // You can perform further validation or processing here
+
+    // For demonstration, we'll just log the values
+    console.log("Name:", name);
+    console.log("Class:", classValue);
+    console.log("Subject:", subject);
+    console.log("Email:", email);
+    console.log("Password:", password);
+}
+
+document.getElementById('googleLogin').onclick = function() {
+    // Redirect to Google login page
+    window.location.href = 'https://accounts.google.com/';
+};
+
+    </script>
+</body>
+</html>
